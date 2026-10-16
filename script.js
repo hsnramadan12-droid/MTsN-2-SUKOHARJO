@@ -7,12 +7,15 @@ const menuToggle = document.getElementById("menuToggle");
 const navMenu = document.getElementById("navMenu");
 
 
-menuToggle.addEventListener("click", function () {
+if (menuToggle && navMenu) {
 
-    navMenu.classList.toggle("active");
+    menuToggle.addEventListener("click", function () {
 
-});
+        navMenu.classList.toggle("active");
 
+    });
+
+}
 
 
 /* =========================================================
@@ -27,7 +30,11 @@ navLinks.forEach(function (link) {
 
     link.addEventListener("click", function () {
 
-        navMenu.classList.remove("active");
+        if (navMenu) {
+
+            navMenu.classList.remove("active");
+
+        }
 
     });
 
@@ -43,8 +50,12 @@ const currentYear =
     document.getElementById("currentYear");
 
 
-currentYear.textContent =
-    new Date().getFullYear();
+if (currentYear) {
+
+    currentYear.textContent =
+        new Date().getFullYear();
+
+}
 
 
 
@@ -56,32 +67,36 @@ const backToTop =
     document.getElementById("backToTop");
 
 
-window.addEventListener("scroll", function () {
+if (backToTop) {
 
-    if (window.scrollY > 500) {
+    window.addEventListener("scroll", function () {
 
-        backToTop.classList.add("show");
+        if (window.scrollY > 500) {
 
-    } else {
+            backToTop.classList.add("show");
 
-        backToTop.classList.remove("show");
+        } else {
 
-    }
+            backToTop.classList.remove("show");
 
-});
-
-
-backToTop.addEventListener("click", function () {
-
-    window.scrollTo({
-
-        top: 0,
-
-        behavior: "smooth"
+        }
 
     });
 
-});
+
+    backToTop.addEventListener("click", function () {
+
+        window.scrollTo({
+
+            top: 0,
+
+            behavior: "smooth"
+
+        });
+
+    });
+
+}
 
 
 
