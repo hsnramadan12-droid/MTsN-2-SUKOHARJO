@@ -1,0 +1,22 @@
+<svg width="240" height="240" viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="30" y1="20" x2="210" y2="210" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1D5A3A"/>
+      <stop offset="1" stop-color="#123D2A"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="70" y1="40" x2="180" y2="170" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F0D36D"/>
+      <stop offset="1" stop-color="#C9A227"/>
+    </linearGradient>
+  </defs>
+  <circle cx="120" cy="120" r="104" fill="url(#bg)"/>
+  <circle cx="120" cy="120" r="92" stroke="#E7C86A" stroke-width="5"/>
+  <path d="M64 96L120 58L176 96V124H64V96Z" fill="url(#gold)"/>
+  <path d="M76 124H164V154C164 166.15 154.15 176 142 176H98C85.85 176 76 166.15 76 154V124Z" fill="#F7F7F7" fill-opacity="0.92"/>
+  <path d="M96 124V154H144V124" stroke="#123D2A" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M120 78V154" stroke="#123D2A" stroke-width="8" stroke-linecap="round"/>
+  <path d="M88 92L120 70L152 92" stroke="#123D2A" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M88 170H152" stroke="#C9A227" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="120" cy="120" r="7" fill="#123D2A"/>
+  <text x="120" y="196" text-anchor="middle" font-size="20" font-family="Arial, Helvetica, sans-serif" font-weight="700" fill="#F3E5A0" letter-spacing="2">MTsN</text>
+</svg>

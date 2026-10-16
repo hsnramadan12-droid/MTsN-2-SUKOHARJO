@@ -1,0 +1,2171 @@
+/* =========================================================
+   VARIABEL WARNA
+   GANTI WARNA WEBSITE DI BAGIAN INI
+========================================================= */
+
+:root {
+
+    --green-dark: #123d2a;
+
+    --green: #1d5a3a;
+
+    --green-light: #2f7651;
+
+    --gold: #c9a227;
+
+    --gold-light: #e0bd4d;
+
+    --gray: #f3f4f4;
+
+    --gray-dark: #666666;
+
+    --white: #ffffff;
+
+    --black: #1e1e1e;
+
+    --border: #e4e4e4;
+
+    --shadow:
+        0 10px 30px rgba(0, 0, 0, 0.08);
+
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    color: var(--black);
+
+    background: var(--white);
+
+    line-height: 1.7;
+
+}
+
+
+/* =========================================================
+   DASAR
+========================================================= */
+
+img {
+
+    max-width: 100%;
+
+    display: block;
+
+}
+
+
+a {
+
+    text-decoration: none;
+
+    color: inherit;
+
+}
+
+
+button {
+
+    font-family: inherit;
+
+}
+
+
+.container {
+
+    width: min(1180px, 92%);
+
+    margin: auto;
+
+}
+
+
+.section {
+
+    padding: 90px 0;
+
+}
+
+
+.section-gray {
+
+    background: var(--gray);
+
+}
+
+
+.section-green {
+
+    background: var(--green-dark);
+
+    color: white;
+
+}
+
+
+/* =========================================================
+   SECTION HEADING
+========================================================= */
+
+.section-heading {
+
+    text-align: center;
+
+    margin-bottom: 55px;
+
+}
+
+
+.section-heading h2 {
+
+    font-size: 38px;
+
+    color: var(--green-dark);
+
+    margin: 8px 0;
+
+}
+
+
+.section-green .section-heading h2 {
+
+    color: white;
+
+}
+
+
+.section-heading p {
+
+    color: var(--gray-dark);
+
+}
+
+
+.section-label {
+
+    display: inline-block;
+
+    color: var(--gold);
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+}
+
+
+.section-label.light {
+
+    color: var(--gold-light);
+
+}
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.navbar {
+
+    position: fixed;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    z-index: 1000;
+
+    background: rgba(18, 61, 42, 0.97);
+
+    box-shadow:
+        0 2px 15px rgba(0, 0, 0, 0.1);
+
+}
+
+
+.nav-container {
+
+    min-height: 78px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+}
+
+
+/* LOGO */
+
+.logo {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    color: white;
+
+}
+
+
+.logo img {
+
+    width: 48px;
+
+    height: 48px;
+
+    object-fit: contain;
+
+}
+
+
+.logo-text {
+
+    display: flex;
+
+    flex-direction: column;
+
+    line-height: 1.2;
+
+}
+
+
+.logo-text strong {
+
+    font-size: 18px;
+
+}
+
+
+.logo-text span {
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    color: var(--gold-light);
+
+}
+
+
+/* MENU */
+
+.nav-menu {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 22px;
+
+}
+
+
+.nav-menu a {
+
+    color: white;
+
+    font-size: 14px;
+
+    font-weight: 500;
+
+    transition: 0.3s;
+
+    position: relative;
+
+}
+
+
+.nav-menu a:hover {
+
+    color: var(--gold-light);
+
+}
+
+
+.nav-menu a::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: -8px;
+
+    width: 0;
+
+    height: 2px;
+
+    background: var(--gold);
+
+    transition: 0.3s;
+
+}
+
+
+.nav-menu a:hover::after {
+
+    width: 100%;
+
+}
+
+
+/* MOBILE BUTTON */
+
+.menu-toggle {
+
+    display: none;
+
+    background: none;
+
+    border: none;
+
+    color: white;
+
+    font-size: 28px;
+
+    cursor: pointer;
+
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+
+    min-height: 100vh;
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    background-image:
+        url("assets/images/gedung baru.jpeg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    color: white;
+
+}
+
+
+.hero-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(18, 61, 42, 0.95),
+            rgba(18, 61, 42, 0.60),
+            rgba(18, 61, 42, 0.25)
+        );
+
+}
+
+
+.hero-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    padding-top: 70px;
+
+}
+
+
+.hero-label {
+
+    color: var(--gold-light);
+
+    font-size: 14px;
+
+    letter-spacing: 3px;
+
+    font-weight: bold;
+
+}
+
+
+.hero h1 {
+
+    font-size: clamp(48px, 7vw, 90px);
+
+    line-height: 1;
+
+    margin: 20px 0;
+
+}
+
+
+.hero h1 span {
+
+    color: var(--gold-light);
+
+}
+
+
+.hero p {
+
+    max-width: 620px;
+
+    font-size: 18px;
+
+    margin-bottom: 30px;
+
+}
+
+
+.hero-buttons {
+
+    display: flex;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+
+}
+
+
+.btn {
+
+    display: inline-block;
+
+    padding: 13px 25px;
+
+    border-radius: 6px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+
+}
+
+
+.btn-primary {
+
+    background: var(--gold);
+
+    color: white;
+
+}
+
+
+.btn-primary:hover {
+
+    background: var(--gold-light);
+
+    transform: translateY(-2px);
+
+}
+
+
+.btn-outline {
+
+    border: 1px solid white;
+
+    color: white;
+
+}
+
+
+.btn-outline:hover {
+
+    background: white;
+
+    color: var(--green-dark);
+
+}
+
+
+.hero-scroll {
+
+    position: absolute;
+
+    bottom: 25px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    font-size: 12px;
+
+    opacity: 0.8;
+
+}
+
+
+/* =========================================================
+   PROFIL
+========================================================= */
+
+.profil-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 70px;
+
+    align-items: center;
+
+}
+
+
+.profil-image {
+
+    position: relative;
+
+}
+
+
+.profil-image img {
+
+    width: 100%;
+
+    height: 480px;
+
+    object-fit: cover;
+
+    border-radius: 15px;
+
+    box-shadow: var(--shadow);
+
+}
+
+
+.profil-badge {
+
+    position: absolute;
+
+    bottom: 25px;
+
+    left: 25px;
+
+    background: var(--green-dark);
+
+    color: white;
+
+    padding: 18px 25px;
+
+    border-left: 4px solid var(--gold);
+
+}
+
+
+.profil-badge strong {
+
+    display: block;
+
+    font-size: 22px;
+
+}
+
+
+.profil-badge span {
+
+    color: var(--gold-light);
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+}
+
+
+.profil-content h3 {
+
+    color: var(--green-dark);
+
+    font-size: 30px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.profil-content p {
+
+    color: var(--gray-dark);
+
+    margin-bottom: 18px;
+
+}
+
+
+.profil-points {
+
+    margin-top: 25px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 12px;
+
+}
+
+
+.profil-points div {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+}
+
+
+.profil-points span {
+
+    width: 25px;
+
+    height: 25px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: var(--gold);
+
+    color: white;
+
+    font-weight: bold;
+
+}
+
+
+.profil-points p {
+
+    margin: 0;
+
+    font-size: 14px;
+
+}
+
+
+/* =========================================================
+   SAMBUTAN
+========================================================= */
+
+.sambutan-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        0.8fr 1.2fr;
+
+    gap: 70px;
+
+    align-items: center;
+
+}
+
+
+.kepala-image img {
+
+    width: 100%;
+
+    height: 500px;
+
+    object-fit: cover;
+
+    border-radius: 15px;
+
+    border: 5px solid rgba(255,255,255,0.1);
+
+}
+
+
+.sambutan-content {
+
+    position: relative;
+
+}
+
+
+.sambutan-content h2 {
+
+    font-size: 40px;
+
+    margin: 5px 0 20px;
+
+}
+
+
+.sambutan-content p {
+
+    color: rgba(255,255,255,0.82);
+
+    margin-bottom: 15px;
+
+}
+
+
+.quote-mark {
+
+    font-size: 100px;
+
+    color: var(--gold);
+
+    line-height: 0.7;
+
+    opacity: 0.5;
+
+}
+
+
+.kepala-name {
+
+    margin-top: 25px;
+
+    padding-top: 20px;
+
+    border-top: 1px solid rgba(255,255,255,0.2);
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+
+.kepala-name strong {
+
+    color: var(--gold-light);
+
+}
+
+
+.kepala-name span {
+
+    font-size: 13px;
+
+    color: rgba(255,255,255,0.7);
+
+}
+
+
+/* =========================================================
+   VISI MISI
+========================================================= */
+
+.visi-misi-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 25px;
+
+}
+
+
+.visi-card,
+.misi-card {
+
+    padding: 40px;
+
+    border-radius: 15px;
+
+    box-shadow: var(--shadow);
+
+}
+
+
+.visi-card {
+
+    background: var(--green-dark);
+
+    color: white;
+
+}
+
+
+.misi-card {
+
+    background: white;
+
+    border: 1px solid var(--border);
+
+}
+
+
+.icon-circle {
+
+    width: 55px;
+
+    height: 55px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: var(--gold);
+
+    color: white;
+
+    font-size: 25px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.visi-card > span,
+.misi-card > span {
+
+    color: var(--gold);
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+
+    font-weight: bold;
+
+}
+
+
+.visi-card h3,
+.misi-card h3 {
+
+    margin: 8px 0 15px;
+
+    font-size: 25px;
+
+}
+
+
+.visi-card p {
+
+    color: rgba(255,255,255,0.8);
+
+}
+
+
+.misi-card ol {
+
+    padding-left: 20px;
+
+    color: var(--gray-dark);
+
+}
+
+
+.misi-card li {
+
+    margin-bottom: 10px;
+
+}
+
+
+/* =========================================================
+   PROGRAM
+========================================================= */
+
+.program-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 22px;
+
+}
+
+
+.program-card {
+
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 12px;
+
+    border: 1px solid var(--border);
+
+    transition: 0.3s;
+
+}
+
+
+.program-card:hover {
+
+    transform: translateY(-7px);
+
+    box-shadow: var(--shadow);
+
+    border-color: var(--gold);
+
+}
+
+
+.program-icon {
+
+    width: 55px;
+
+    height: 55px;
+
+    border-radius: 10px;
+
+    background: rgba(201,162,39,0.12);
+
+    color: var(--gold);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 25px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.program-card h3 {
+
+    color: var(--green-dark);
+
+    margin-bottom: 10px;
+
+}
+
+
+.program-card p {
+
+    color: var(--gray-dark);
+
+    font-size: 14px;
+
+}
+
+
+/* =========================================================
+   BERITA
+========================================================= */
+
+.heading-row {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: end;
+
+    text-align: left;
+
+}
+
+
+.heading-row h2 {
+
+    margin-bottom: 0;
+
+}
+
+
+.text-link {
+
+    color: var(--green);
+
+    font-weight: bold;
+
+}
+
+
+.berita-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+
+}
+
+
+.berita-card {
+
+    background: white;
+
+    border: 1px solid var(--border);
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    transition: 0.3s;
+
+}
+
+
+.berita-card:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow: var(--shadow);
+
+}
+
+
+.berita-image {
+
+    height: 230px;
+
+    position: relative;
+
+}
+
+
+.berita-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+}
+
+
+.berita-category {
+
+    position: absolute;
+
+    top: 15px;
+
+    left: 15px;
+
+    background: var(--gold);
+
+    color: white;
+
+    padding: 5px 10px;
+
+    font-size: 11px;
+
+    border-radius: 4px;
+
+}
+
+
+.berita-content {
+
+    padding: 25px;
+
+}
+
+
+.berita-date {
+
+    color: var(--gold);
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+}
+
+
+.berita-content h3 {
+
+    color: var(--green-dark);
+
+    margin: 8px 0 12px;
+
+    font-size: 19px;
+
+}
+
+
+.berita-content p {
+
+    color: var(--gray-dark);
+
+    font-size: 14px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.berita-content a {
+
+    color: var(--green);
+
+    font-weight: bold;
+
+    font-size: 14px;
+
+}
+
+
+/* =========================================================
+   AGENDA
+========================================================= */
+
+.agenda-list {
+
+    max-width: 850px;
+
+    margin: auto;
+
+}
+
+
+.agenda-item {
+
+    display: flex;
+
+    gap: 25px;
+
+    padding: 25px;
+
+    background: white;
+
+    border-radius: 12px;
+
+    margin-bottom: 15px;
+
+    border: 1px solid var(--border);
+
+    align-items: center;
+
+}
+
+
+.agenda-date {
+
+    min-width: 70px;
+
+    height: 75px;
+
+    background: var(--green-dark);
+
+    color: white;
+
+    border-radius: 10px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+.agenda-date strong {
+
+    font-size: 28px;
+
+    line-height: 1;
+
+}
+
+
+.agenda-date span {
+
+    color: var(--gold-light);
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+}
+
+
+.agenda-info > span {
+
+    color: var(--gold);
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+}
+
+
+.agenda-info h3 {
+
+    color: var(--green-dark);
+
+    margin: 3px 0;
+
+}
+
+
+.agenda-info p {
+
+    color: var(--gray-dark);
+
+    font-size: 14px;
+
+}
+
+
+/* =========================================================
+   GALERI
+========================================================= */
+
+.gallery-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 15px;
+
+}
+
+
+.gallery-item {
+
+    height: 260px;
+
+    overflow: hidden;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+}
+
+
+.gallery-item img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: 0.5s;
+
+}
+
+
+.gallery-item:hover img {
+
+    transform: scale(1.08);
+
+}
+
+
+/* =========================================================
+   GURU
+========================================================= */
+
+.guru-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 20px;
+
+}
+
+
+.guru-card {
+
+    background: white;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    border: 1px solid var(--border);
+
+    transition: 0.3s;
+
+}
+
+
+.guru-card:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow: var(--shadow);
+
+}
+
+
+.guru-card img {
+
+    width: 100%;
+
+    height: 280px;
+
+    object-fit: cover;
+
+}
+
+
+.guru-card div {
+
+    padding: 18px;
+
+}
+
+
+.guru-card h3 {
+
+    color: var(--green-dark);
+
+    font-size: 17px;
+
+}
+
+
+.guru-card p {
+
+    color: var(--gray-dark);
+
+    font-size: 13px;
+
+}
+
+
+/* =========================================================
+   PRESTASI
+========================================================= */
+
+.prestasi-section {
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--green-dark),
+            var(--green)
+        );
+
+    color: white;
+
+}
+
+
+.prestasi-section .section-heading h2 {
+
+    color: white;
+
+}
+
+
+.prestasi-section .section-heading p {
+
+    color: rgba(255,255,255,0.7);
+
+}
+
+
+.prestasi-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 20px;
+
+}
+
+
+.prestasi-card {
+
+    text-align: center;
+
+    padding: 35px 20px;
+
+    border: 1px solid rgba(255,255,255,0.15);
+
+    border-radius: 12px;
+
+    background: rgba(255,255,255,0.05);
+
+}
+
+
+.prestasi-card strong {
+
+    display: block;
+
+    font-size: 48px;
+
+    color: var(--gold-light);
+
+    line-height: 1;
+
+    margin-bottom: 10px;
+
+}
+
+
+.prestasi-card span {
+
+    color: rgba(255,255,255,0.8);
+
+}
+
+
+/* =========================================================
+   KONTAK
+========================================================= */
+
+.kontak-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        0.8fr 1.2fr;
+
+    gap: 50px;
+
+}
+
+
+.kontak-item {
+
+    display: flex;
+
+    gap: 15px;
+
+    margin-bottom: 30px;
+
+}
+
+
+.kontak-icon {
+
+    min-width: 48px;
+
+    height: 48px;
+
+    background: var(--gold);
+
+    border-radius: 8px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+.kontak-item h3 {
+
+    margin-bottom: 3px;
+
+}
+
+
+.kontak-item p {
+
+    color: rgba(255,255,255,0.7);
+
+    font-size: 14px;
+
+}
+
+
+.map-container {
+
+    overflow: hidden;
+
+    border-radius: 12px;
+
+}
+
+
+.map-container iframe {
+
+    display: block;
+
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.footer {
+
+    background: #0b2b1e;
+
+    color: white;
+
+    padding: 60px 0 0;
+
+}
+
+
+.footer-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        2fr 1fr 1fr;
+
+    gap: 50px;
+
+    padding-bottom: 50px;
+
+}
+
+
+.footer-logo {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.footer-logo img {
+
+    width: 50px;
+
+    height: 50px;
+
+    object-fit: contain;
+
+}
+
+
+.footer-logo strong,
+.footer-logo span {
+
+    display: block;
+
+}
+
+
+.footer-logo span {
+
+    color: var(--gold-light);
+
+    font-size: 11px;
+
+}
+
+
+.footer-about p {
+
+    color: rgba(255,255,255,0.65);
+
+    max-width: 400px;
+
+}
+
+
+.footer-links {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+
+}
+
+
+.footer-links h3 {
+
+    color: var(--gold-light);
+
+    margin-bottom: 10px;
+
+}
+
+
+.footer-links a {
+
+    color: rgba(255,255,255,0.7);
+
+    font-size: 14px;
+
+}
+
+
+.footer-links a:hover {
+
+    color: white;
+
+}
+
+
+.footer-bottom {
+
+    border-top: 1px solid rgba(255,255,255,0.1);
+
+    padding: 20px 0;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    color: rgba(255,255,255,0.5);
+
+    font-size: 12px;
+
+}
+
+
+/* =========================================================
+   WHATSAPP
+========================================================= */
+
+.whatsapp-button {
+
+    position: fixed;
+
+    right: 25px;
+
+    bottom: 25px;
+
+    width: 58px;
+
+    height: 58px;
+
+    background: #25D366;
+
+    color: white;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-weight: bold;
+
+    z-index: 999;
+
+    box-shadow:
+        0 5px 20px rgba(0,0,0,0.2);
+
+    transition: 0.3s;
+
+}
+
+
+.whatsapp-button:hover {
+
+    transform: scale(1.1);
+
+}
+
+
+/* =========================================================
+   BACK TO TOP
+========================================================= */
+
+.back-to-top {
+
+    position: fixed;
+
+    right: 25px;
+
+    bottom: 95px;
+
+    width: 45px;
+
+    height: 45px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: var(--gold);
+
+    color: white;
+
+    font-size: 20px;
+
+    cursor: pointer;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transition: 0.3s;
+
+    z-index: 998;
+
+}
+
+
+.back-to-top.show {
+
+    opacity: 1;
+
+    visibility: visible;
+
+}
+
+
+/* =========================================================
+   RESPONSIVE TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .nav-menu {
+
+        gap: 13px;
+
+    }
+
+    .nav-menu a {
+
+        font-size: 12px;
+
+    }
+
+
+    .profil-grid,
+    .sambutan-grid,
+    .kontak-grid {
+
+        gap: 40px;
+
+    }
+
+
+    .program-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+
+    .guru-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE HP
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .section {
+
+        padding: 65px 0;
+
+    }
+
+
+    .section-heading h2 {
+
+        font-size: 30px;
+
+    }
+
+
+    /* NAVBAR */
+
+    .menu-toggle {
+
+        display: block;
+
+    }
+
+
+    .nav-menu {
+
+        position: absolute;
+
+        top: 78px;
+
+        left: 0;
+
+        width: 100%;
+
+        background: var(--green-dark);
+
+        display: none;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 0;
+
+        padding: 10px 5% 20px;
+
+    }
+
+
+    .nav-menu.active {
+
+        display: flex;
+
+    }
+
+
+    .nav-menu a {
+
+        padding: 12px 0;
+
+        font-size: 14px;
+
+    }
+
+
+    .nav-menu a::after {
+
+        display: none;
+
+    }
+
+
+    /* HERO */
+
+    .hero {
+
+        min-height: 90vh;
+
+    }
+
+
+    .hero h1 {
+
+        font-size: 52px;
+
+    }
+
+
+    .hero p {
+
+        font-size: 16px;
+
+    }
+
+
+    /* PROFIL */
+
+    .profil-grid,
+    .sambutan-grid,
+    .visi-misi-grid,
+    .kontak-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .profil-image img {
+
+        height: 350px;
+
+    }
+
+
+    .kepala-image img {
+
+        height: 400px;
+
+    }
+
+
+    .profil-points {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    /* PROGRAM */
+
+    .program-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    /* BERITA */
+
+    .heading-row {
+
+        display: block;
+
+        text-align: center;
+
+    }
+
+
+    .heading-row .text-link {
+
+        display: inline-block;
+
+        margin-top: 15px;
+
+    }
+
+
+    .berita-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    /* GALERI */
+
+    .gallery-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+
+    .gallery-item {
+
+        height: 200px;
+
+    }
+
+
+    /* GURU */
+
+    .guru-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+
+    /* PRESTASI */
+
+    .prestasi-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+
+    /* FOOTER */
+
+    .footer-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+
+    }
+
+
+    .footer-bottom {
+
+        flex-direction: column;
+
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE HP KECIL
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .logo-text strong {
+
+        font-size: 15px;
+
+    }
+
+
+    .logo img {
+
+        width: 42px;
+
+        height: 42px;
+
+    }
+
+
+    .hero h1 {
+
+        font-size: 43px;
+
+    }
+
+
+    .hero-label {
+
+        font-size: 11px;
+
+        letter-spacing: 2px;
+
+    }
+
+
+    .hero-buttons {
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+    }
+
+
+    .btn {
+
+        text-align: center;
+
+    }
+
+
+    .gallery-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .guru-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .prestasi-grid {
+
+        grid-template-columns: 1fr 1fr;
+
+    }
+
+
+    .prestasi-card strong {
+
+        font-size: 35px;
+
+    }
+
+
+    .agenda-item {
+
+        gap: 15px;
+
+        padding: 18px;
+
+    }
+
+
+    .agenda-date {
+
+        min-width: 60px;
+
+        height: 65px;
+
+    }
+
+
+    .whatsapp-button {
+
+        right: 18px;
+
+        bottom: 18px;
+
+    }
+
+
+    .back-to-top {
+
+        right: 18px;
+
+        bottom: 85px;
+
+    }
+
+}
