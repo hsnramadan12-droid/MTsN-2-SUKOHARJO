@@ -5,28 +5,28 @@
 
 :root {
 
-    --green-dark: #123d2a;
+    --green-dark: #123b35;
 
-    --green: #1d5a3a;
+    --green: #1e6655;
 
-    --green-light: #2f7651;
+    --green-light: #36836d;
 
-    --gold: #c9a227;
+    --gold: #a98236;
 
-    --gold-light: #e0bd4d;
+    --gold-light: #dfc387;
 
-    --gray: #f3f4f4;
+    --gray: #f5f7f4;
 
-    --gray-dark: #666666;
+    --gray-dark: #68736f;
 
-    --white: #ffffff;
+    --white: #fffefa;
 
-    --black: #1e1e1e;
+    --black: #26332f;
 
-    --border: #e4e4e4;
+    --border: #e3e9e4;
 
     --shadow:
-        0 10px 30px rgba(0, 0, 0, 0.08);
+        0 12px 32px rgba(18, 59, 53, 0.09);
 
 }
 
@@ -200,10 +200,10 @@ button {
 
     z-index: 1000;
 
-    background: rgba(18, 61, 42, 0.97);
+    background: rgba(18, 59, 53, 0.97);
 
     box-shadow:
-        0 2px 15px rgba(0, 0, 0, 0.1);
+        0 3px 18px rgba(18, 59, 53, 0.16);
 
 }
 
@@ -393,9 +393,9 @@ button {
     background:
         linear-gradient(
             90deg,
-            rgba(18, 61, 42, 0.95),
-            rgba(18, 61, 42, 0.60),
-            rgba(18, 61, 42, 0.25)
+            rgba(18, 59, 53, 0.94),
+            rgba(18, 59, 53, 0.58),
+            rgba(18, 59, 53, 0.20)
         );
 
 }
@@ -964,7 +964,7 @@ button {
 
     border-radius: 10px;
 
-    background: rgba(201,162,39,0.12);
+    background: rgba(169,130,54,0.13);
 
     color: var(--gold);
 
@@ -1717,7 +1717,7 @@ button {
 
 .footer {
 
-    background: #0b2b1e;
+    background: #0c2b27;
 
     color: white;
 
