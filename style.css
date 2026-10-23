@@ -1007,14 +1007,18 @@ button {
 
     display: grid;
 
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: 1fr;
 
-    gap: 22px;
+    gap: 28px;
 
 }
 
 
 .fasilitas-card {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
 
     background: white;
 
@@ -1040,7 +1044,7 @@ button {
 
 .fasilitas-image {
 
-    height: 190px;
+    min-height: 240px;
 
     overflow: hidden;
 
@@ -1062,7 +1066,27 @@ button {
 
 .fasilitas-content {
 
-    padding: 22px;
+    align-self: center;
+
+    padding: 32px;
+
+}
+
+
+.fasilitas-card:nth-child(even) .fasilitas-image {
+
+    grid-column: 2;
+
+    grid-row: 1;
+
+}
+
+
+.fasilitas-card:nth-child(even) .fasilitas-content {
+
+    grid-column: 1;
+
+    grid-row: 1;
 
 }
 
@@ -2061,14 +2085,6 @@ button {
 
     }
 
-    .fasilitas-grid {
-
-        grid-template-columns:
-            repeat(2, 1fr);
-
-    }
-
-
     .guru-grid {
 
         grid-template-columns:
@@ -2223,6 +2239,27 @@ button {
     .fasilitas-grid {
 
         grid-template-columns: 1fr;
+
+    }
+
+    .fasilitas-card {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .fasilitas-card:nth-child(even) .fasilitas-image,
+    .fasilitas-card:nth-child(even) .fasilitas-content {
+
+        grid-column: 1;
+
+        grid-row: auto;
+
+    }
+
+    .fasilitas-image {
+
+        min-height: 220px;
 
     }
 
